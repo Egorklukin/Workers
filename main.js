@@ -17,7 +17,9 @@ function paintingOfStreetPoles(arrayA, arrayB) {
 
   if (isIntersection) count = endCombiningRange - startCombiningRange + 1;
   else {
-    count = endPosA - startPosA + 1 + endPosB - startPosA + 1;
+    const lenghtA = endPosA - startPosA + 1;
+    const lenghtB = endPosB - startPosB + 1;
+    count = lenghtA + lenghtB;
   }
   console.log(
     `${arrayA.name}: от ${startPosA} до ${endPosA}\n${arrayB.name}: от ${startPosB} до ${endPosB}`,
